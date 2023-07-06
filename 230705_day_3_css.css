@@ -67,113 +67,113 @@ span {
 } */
 
 p.lion {
-  background-color: red;
-}
-ul .lion {
-  background-color: greenyellow;
-  font-weight: 900;
-}
-#tiger {
-  background-color: yellow;
-}
-.lion {
-  color: sienna;
-}
-
-#tiger + li {
-  background-color: skyblue;
-}
-
-span + .lion ~ li {
-  background-color: orange;
-}
-
-/* hover : 마우스 커서를 올렸을 때 */
-a:hover {
-  color: red;
-}
-
-/* active : 마우스를 클릭하고 있을 동안*/
-a:active {
-  color: tomato;
-}
-
-/*fousc : 포커스가 되어 있을 때*/
-input:focus {
-  background-color: blue;
-}
-
-a:hover {
-  color: red;
-}
-a:active {
-  background-color: blue;
-}
-input:focus {
-  background-color: orange;
-}
-
-/* first child*/
-.fruits span:first-child {
-  color: red;
-}
-.fruits div:first-child {
-  color: blue;
-}
-
-.furits h3:last-child {
-  text-decoration: overline;
-}
-.fruits p:last-child {
-  color: green;
-}
-/*not*/
-.fruits *:not(span) {
-  background-color: aqua;
-}
-
-.stripes div:nth-child(2n) {
-  background-color: yellow;
-}
-.stripes div:nth-child(2n + 1) {
-  background-color: navy;
-  color: white;
-}
-/* before*/
-/* .box::before {
-  /* context: "과일, 목록, 시작"; */
-/* after */
-/* .box::after{con} */
-
-/* .box::before {
-  content: "택시";
-}
-.box::after {
-  content: "빨리";
-}
-
-input[disabled] {
-  background-color: black;
-}
-input[read-only] {
-  background-color: yellowgreen;
-}
-input[type="password"] {
-  color: red;
-} */
-
-input[disabled] {
-  background-color: red;
-}
-input[placeholder="이름"] {
-  background-color: orange;
-}
-/* input[type="password"] {
-  background-color: blue;
-}
-input[value="010-0000-0000"] {
-  background-color: blue;
-} */
-input:not([placeholder]) {
-  background-color: blue;
-}
+    background-color: red;
+  }
+  ul .lion {
+    background-color: greenyellow;
+    font-weight: 900;
+  }
+  #tiger {
+    background-color: yellow;
+  }
+  .lion {
+    color: sienna;
+  }
+  
+  #tiger + li {
+    background-color: skyblue;
+  }
+  
+  span + .lion ~ li {
+    background-color: orange;
+  }
+  
+  /* hover : 마우스 커서를 올렸을 때 */
+  a:hover {
+    color: red;
+  }
+  
+  /* active : 마우스를 클릭하고 있을 동안*/
+  a:active {
+    color: tomato;
+  }
+  
+  /*fousc : 포커스가 되어 있을 때*/
+  input:focus {
+    background-color: blue;
+  }
+  
+  a:hover {
+    color: red;
+  }
+  a:active {
+    background-color: blue;
+  }
+  input:focus {
+    background-color: orange;
+  }
+  
+  /* first child*/
+  .fruits span:first-child {
+    color: red;
+  }
+  .fruits div:first-child {
+    color: blue;
+  }
+  
+  .furits h3:last-child {
+    text-decoration: overline;
+  }
+  .fruits p:last-child {
+    color: green;
+  }
+  /*not*/
+  .fruits *:not(span) {
+    background-color: aqua;
+  }
+  
+  .stripes div:nth-child(2n) {
+    background-color: yellow;
+  }
+  .stripes div:nth-child(2n + 1) {
+    background-color: navy;
+    color: white;
+  }
+  /* before*/
+  /* .box::before {
+    /* context: "과일, 목록, 시작"; */
+  /* after */
+  /* .box::after{con} */
+  
+  /* .box::before {
+    content: "택시";
+  }
+  .box::after {
+    content: "빨리";
+  }
+  
+  input[disabled] {
+    background-color: black;
+  }
+  input[read-only] {
+    background-color: yellowgreen;
+  }
+  input[type="password"] {
+    color: red;
+  } */
+  
+  input[disabled] {
+    background-color: red;
+  }
+  input[placeholder="이름"] {
+    background-color: orange;
+  }
+  /* input[type="password"] {
+    background-color: blue;
+  }
+  input[value="010-0000-0000"] {
+    background-color: blue;
+  } */
+  input:not([placeholder]) {
+    background-color: blue;
+  }
