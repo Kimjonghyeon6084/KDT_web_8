@@ -1,0 +1,123 @@
+/* .container {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: relative;
+}
+.circle {
+  border-radius: 50%;
+}
+.item1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.eye1 {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+.eye2 {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+.item2 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: absolute;
+  top: 35px;
+  left: 75px;
+}
+.item3 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  position: absolute;
+  top: 70px;
+  left: 110px;
+}
+.item4 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: absolute;
+  top: 70px;
+  left: 160px;
+}
+.item5 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  top: 70px;
+  left: 210px;
+  z-index: 8;
+}
+img {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  width: 350px;
+  height: 70px;
+  z-index: 7;
+} */
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.item1 {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+.item2 {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+}
+.item3 {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
+.item4 {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+.item5 {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+.item6 {
+  background-color: navy;
+  width: 100px;
+  height: 100px;
+}
+.item7 {
+  background-color: purple;
+  width: 100px;
+  height: 100px;
+}
+.item8 {
+  background-color: darkgoldenrod;
+  width: 100px;
+  height: 100px;
+}

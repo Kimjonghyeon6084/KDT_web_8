@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div {
+        width: 100px;
+        height: 100px;
+      } */
+      /* body {
+        position: relative;
+        left: 0px;
+        right: 0px;
+        background-color: antiquewhite;
+      } */
+      /* .item1 {
+        background-color: blue;
+        position: relative;
+        left: 50px;
+        top: 30px;
+        z-index: 1;
+      } */
+      /* .item2 {
+        background-color: yellow;
+        right: 30px;
+        bottom: 100px;
+        position: absolute;
+      } */
+      /* .item3 {.parent {
+        position: relative;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+      }
+        top: 100px;
+        right: 100px;
+        background-color: skyblue;
+        position: fixed;
+      } */
+      /*  */
+      /* .circle1 {
+        background-color: #9afaff;
+        top: 0;
+        left: 200px;
+      }
+      .circle2 {
+        background-color: #84ff8d;
+        top: 0;
+        left: 150px;
+      }
+      .circle3 {
+        background-color: #ffeb88;
+        top: 0;
+        left: 100px;
+      }
+      .circle4 {
+        background-color: #ffb580;
+        top: 0;
+        left: 50ox;
+      }
+      .circle5 {
+        top: 0;
+        left: 0;
+        background-color: #ff7c7c; */
+
+      /* .container {
+        background-color: aqua;
+        width: 500px;
+        height: 500px;
+        position: relative;
+      }
+      .item1 {
+        position: absolute;
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        z-index: 3;
+      }
+      .item2 {
+        background-color: blue;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 30px;
+        left: 30px;
+        z-index: 1;
+      }
+      .item3 {
+        background-color: orange;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 60px;
+        left: 60px;
+        z-index: 2;
+      } */
+      .container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: blue;
+      }
+
+      .circle1 {
+        background-color: #4d43da;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+      .circle2 {
+        background-color: hsl(215, 64%, 43%);
+        position: absolute;
+        left: 80px;
+        top: 30px;
+      }
+      .circle3 {
+        background-color: #316fb3;
+        position: absolute;
+        left: 110px;
+        top: 90px;
+      }
+      .circle4 {
+        background-color: #228ea3;
+        position: absolute;
+        left: 160px;
+        top: 90px;
+      }
+      .circle5 {
+        background-color: #43dac8;
+        position: absolute;
+        left: 210px;
+        top: 90px;
+        z-index: 4;
+      }
+      .eye1 {
+        background-color: white;
+        position: relative;
+        top: 40px;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        z-index: 3;
+      }
+      .eye2 {
+        background-color: black;
+        position: relative;
+        width: 11px;
+        height: 11px;
+        top: 25px;
+        left: 21px;
+        z-index: 4;
+      }
+      img {
+        width: 350px;
+        height: 80px;
+        position: absolute;
+        top: 140px;
+      }
+      /* .container {
+        width: 800px;
+        height: 500px;
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+        background-color: orange;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: contain;
+        background-attachment: scroll;
+        overflow: scroll;
+      } */
+      .one {
+        width: 800px;
+        height: 500px;
+        top: 0;
+        background-position: center;
+        background-repeat: repeat-x;
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+      }
+      .two {
+        width: 800px;
+        height: 500px;
+        position: relative;
+        left: 801px;
+        top: 0px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: ;
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+      }
+      .three {
+        width: 800px;
+        height: 500px;
+        position: relative;
+        top: 501px;
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div style="width: 500px; height: 500px"></div>
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div> -->
+
+    <!-- <div class="container">
+        <div class="circle eye1"></div>
+        <div class="circle eye2"></div>
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+      <div class="circle circle4"></div>
+      <div class="circle circle5"></div>
+      <div>
+      <img src="./pngwing.com.png">
+    </div> -->
+
+    <div class="container">
+      <div class="one">1번</div>
+      <div class="two">2번</div>
+      <div class="three">3번</div>
+    </div>
+  </body>
+</html>
