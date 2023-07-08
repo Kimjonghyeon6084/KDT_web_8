@@ -19,13 +19,15 @@ span {
 }
 
 ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/*li, span??*/
+li,
+span {
+  padding: 0 5px;
 }
 
 h1 {
@@ -44,6 +46,15 @@ header {
     - 편의를 위해 header2 ~ 4는 display: none 처리를 해두었습니다.
     - 해당 header 작업할 때 display: none 코드를 지워서 작업하면 됩니다!
 */
+
+/*menus??*/
+.menus {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* header1 */
 .header1 {
   display: flex;
@@ -51,20 +62,13 @@ header {
   align-items: center;
 }
 
-.header1 > ul {
-  align-content: space-between;
-}
-.meuns {
-  justify-content: space-between;
-}
-
 /* header2 */
 .header2 {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-.header2 .meuns {
+.header2 ul {
+  width: 100%;
   display: flex;
   align-content: space-between;
 }
@@ -77,6 +81,7 @@ header {
 }
 .header3 ul {
   display: flex;
+  justify-content: space-around;
 }
 
 /* header4 */
@@ -85,10 +90,20 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
-.header4 .meun-right {
+.header4 .menu-left {
   display: flex;
 }
-.header4 .meun-left {
-  justify-content: space-between;
+
+.header4 .menu-left ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header4 .menu-right {
+  display: flex;
+}
+
+.header4 .menu-right ul {
+  display: flex;
+  justify-content: space-around;
 }
