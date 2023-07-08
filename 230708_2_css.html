@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      div {
-        /* width: 100px;
+      /* div { */
+      /* width: 100px;
           height: 100px;
           background-color: red; */
-      }
-      div:hover {
-        /* transform: translate(40px, 40px); */
-        /* transform: scale(2); */
-        /* transform: rotate(45deg); */
-        /* transform: rotatey(180deg);
+      /* } */
+      /* div:hover { */
+      /* transform: translate(40px, 40px); */
+      /* transform: scale(2); */
+      /* transform: rotate(45deg); */
+      /* transform: rotatey(180deg);
           backface-visibility: hidden; */
-        /* transform: skew(60deg, 60deg); */
-      }
+      /* transform: skew(60deg, 60deg); */
+      /* } */
 
       /* img {
         width: 300px;
@@ -173,7 +173,7 @@
           left: 0%;
         }
       } */
-      div {
+      /* div {
         position: relative;
         background-color: aquamarine;
         width: 800px;
@@ -333,11 +333,125 @@
         100% {
           opacity: 0%;
         }
+      } */
+      /* div {
+        background-color: black;
+        position: relative;
+        width: 500px;
+        height: 500px;
+        transition-property: ;
       }
+      .google {
+        position: absolute;
+        left: 100px;
+        top: 200px;
+        width: 150px;
+        height: 150px;
+        transform: skewY(30deg);
+        z-index: 3;
+      }
+      .naver {
+        position: absolute;
+        left: 200px;
+        top: 150px;
+        width: 150px;
+        height: 150px;
+        transform: skewY(30deg);
+        z-index: 2;
+      }
+      .daum {
+        position: absolute;
+        left: 300px;
+        top: 100px;
+        width: 150px;
+        height: 150px;
+        transform: skewY(30deg);
+        z-index: 1;
+      } */
+      /* div {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        color: white;
+        overflow-y: scroll;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-delay: 2s;
+      }
+      div:hover {
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        color: black;
+      } */
+      /* body {
+        position: relative;
+      }
+      div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: red;
+        animation-name: animation2;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-delay: 0.5s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+      }
+      @keyframes animation2 {
+        0% {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          position: absolute;
+          left: 100px;
+          top: 0px;
+        }
+        50% {
+          position: absolute;
+          left: 100px;
+          top: 100px;
+        }
+        75% {
+          position: absolute;
+          left: 0px;
+          top: 100px;
+        }
+        100% {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        }
+      } */
+      /* body {
+        position: relative;
+      }
+      div {
+        animation-name: animation3;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-delay: 0.5s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes animation3 {
+        0% {
+          position: absolute;
+          width: 500%;
+          left: 100%;
+        }
+        100% {
+          position: absolute;
+          width: 100%;
+          left: 0%;
+        }
+      } */
     </style>
   </head>
   <body>
-    <div class="background">
+    <!-- <div class="background">
       <img class="city" src="./ani_town/img/city.png" alt="" />
       <img class="cloud1" src="./ani_town/img/cloud.png" alt="" />
       <img class="cloud2" src="./ani_town/img/cloud.png" alt="" />
@@ -347,8 +461,31 @@
     <script src="">
       //   console.log{'hello JS wordl'}
       //   alert('hello JS wordl')
-      var a = "hi";
-      console.log(a);
-    </script>
+      /*
+      var : 재선언 가능, 재할당 가능
+      let : 재선언 불가능, 재할당 가능
+      const : 상수처럼 아무것도 안 된다.
+      */
+     var /* 선언 */
+      var a = "hi"; /* 선언 + 할당 */
+      console.log(a);/* 할당 */
+
+      let b;
+      b= "잘가";
+      //const :  재선언 재할당x
+      const c = "바로 선언 + 할당"
+      c = "asdfasdf"</script> -->
+    <!-- <div>
+      <img class="google" src="./google.png" alt="" />
+      <img class="naver" src="./naver.png" alt="" />
+      <img class="daum" src="./daum.png" alt="" />
+    </div> -->
+    <!-- <div>
+      “As I relax on the sofa and gaze around a room a thought hits me: this is
+      exactly the place I’ve been looking for all my life. A little hideaway in
+      some sinkhole somewhere. I’d always thought of it as a secret, imaginary
+      place, and can barely believe that it actually exists. I close my eyes and
+      take a breath, and wonder of it all settles over me like a gentle cloud.”
+    </div> -->
   </body>
 </html>
