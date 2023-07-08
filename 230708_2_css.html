@@ -154,7 +154,7 @@
           top: 0px;
         }
       } */
-      div {
+      /* div {
         position: relative;
         animation-name: animation_2;
         animation-duration: 2s;
@@ -172,26 +172,183 @@
           width: 100%;
           left: 0%;
         }
+      } */
+      div {
+        position: relative;
+        background-color: aquamarine;
+        width: 800px;
+        height: 400px;
+        animation-name: background2;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease;
+      }
+      .city {
+        position: absolute;
+        left: 200px;
+        top: 180px;
+        width: 400px;
+        height: 200px;
+        animation-name: city;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease;
+      }
+      .cloud1 {
+        position: absolute;
+        left: 150px;
+        top: 100px;
+        width: 130px;
+        height: 70px;
+        animation-name: cloud1;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease;
+      }
+      .cloud2 {
+        position: absolute;
+        left: 240px;
+        top: 140px;
+        width: 60px;
+        height: 30px;
+        animation-name: cloud2;
+        animation-duration: 5s;
+        animation-delay: 0s;
+        animation-iteration-count: 2;
+        animation-direction: normal;
+        animation-timing-function: ease;
+      }
+      .moon {
+        position: absolute;
+        left: 100px;
+        top: 30px;
+        width: 100px;
+        height: 100px;
+        animation-name: moon;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease;
+      }
+      .sun {
+        position: absolute;
+        left: 100px;
+        top: 30px;
+        width: 100px;
+        height: 100px;
+        animation-name: sun;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease;
+      }
+      @keyframes background2 {
+        0% {
+          background-color: rgb(132, 132, 240);
+        }
+        50% {
+          background-color: rgb(236, 161, 128);
+        }
+        100% {
+          background-color: rgb(101, 66, 66);
+        }
+      }
+      @keyframes sun {
+        0% {
+          transform: rotateZ(270deg);
+          opacity: 0%;
+        }
+        20% {
+          opacity: 100%;
+        }
+        45% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0%;
+        }
+      }
+      @keyframes moon {
+        0% {
+          transform: rotateZ(270deg);
+          opacity: 0%;
+        }
+        45% {
+          opacity: 0%;
+        }
+        60% {
+          opacity: 100%;
+        }
+        75% {
+          opacity: 100%;
+        }
+        100% {
+          opacity: 0%;
+        }
+      }
+      @keyframes cloud1 {
+        0% {
+          opacity: 0%;
+        }
+        25% {
+          opacity: 100%;
+        }
+        50% {
+          left: 80%;
+          opacity: 0%;
+        }
+        60% {
+          opacity: 100%;
+        }
+        70% {
+          opacity: 100%;
+        }
+        100% {
+          left: 20%;
+          opacity: 0%;
+        }
+      }
+      @keyframes cloud2 {
+        0% {
+          opacity: 0%;
+        }
+        20% {
+          opacity: 100%;
+        }
+        50% {
+          left: 80%;
+          opacity: 0%;
+        }
+        75% {
+          opacity: 100%;
+        }
+        100% {
+          opacity: 0%;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- <div class="container">
-      <img class="aa" src="./11.png" alt="" />
-      <img class="bb" src="./22.png" alt="" />
-      <img class="cc" src="./33.png" alt="" />
-    </div> -->
-    <!-- <div class="transition">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora,
-      doloribus dolorum vero eveniet odio laudantium sunt, asperiores quis
-      maiores ut saepe. Debitis dolorum sunt aliquid repellat rem fuga qui.
-    </div> -->
-    <div class="animation_2">
-      “As I relax on the sofa and gaze around a room a thought hits me: this is
-      exactly the place I’ve been looking for all my life. A little hideaway in
-      some sinkhole somewhere. I’d always thought of it as a secret, imaginary
-      place, and can barely believe that it actually exists. I close my eyes and
-      take a breath, and wonder of it all settles over me like a gentle cloud.”
+    <div class="background">
+      <img class="city" src="./ani_town/img/city.png" alt="" />
+      <img class="cloud1" src="./ani_town/img/cloud.png" alt="" />
+      <img class="cloud2" src="./ani_town/img/cloud.png" alt="" />
+      <img class="moon" src="./ani_town/img/moon.png" alt="" />
+      <img class="sun" src="./ani_town/img/sun.png" alt="" />
     </div>
+    <script src="">
+      //   console.log{'hello JS wordl'}
+      //   alert('hello JS wordl')
+      var a = "hi";
+      console.log(a);
+    </script>
   </body>
 </html>
