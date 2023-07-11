@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // let name = "김종현";
+      // console.log(name);
+
+      // const name = "김종현";
+      // console.log(name);
+
+      // let checked = "true";
+      // let isshow = "false";
+
+      // console.log(checked);
+      // console.log(isshow);
+
+      // let undef;
+      // let obj = { abc: 123 };
+      // console.log(undef);
+      // console.log(obj.abc);
+
+      // let name = null;
+      // console.log(name);
+
+      // let fruits = ["orange", "pinepaale", "apple", "banana"];
+      // console.log(fruits[0], fruits[3]);
+
+      // let color2 = color.push("blue");
+
+      // let color = ["red", "orange", "yellow", "green"];
+      // console.log(color.unshift("black"));
+      // console.log(color);
+
+      // console.log(color);
+
+      // let color = ["red", "orange", "yellow", "green"];
+      // console.log(color.indexOf("green"));
+      // console.log(color.indexOf("black"));
+
+      // let color = ["red", "orange", "yellow", "green"];
+      // console.log(color.includes("orange"));
+
+      //실습1//
+
+      // let color = ["red", "orange", "yellow", "green", "blue", "navy", "black"];
+      // console.log(color.indexOf("yellow"));
+      // color.push("white");
+      // console.log(color);
+      // console.log(color.indexOf("black"));
+      // console.log(color.reverse());
+
+      // console.log(typeof "안녕");
+      // console.log(typeof 2);
+      // console.log(typeof null);
+
+      //실습 3. typeof를 이용하여 문구 만들기
+
+      // console.log(
+      //   `${typeof "num"} isn't ${typeof "test"} data type. typeof를 boolean이나 null 에 사용하면, ${typeof "null"} 결과를 얻을 수 있습니다.`
+      // );
+
+      //형변환
+
+      // let mathScore = prompt("수학 점수를 입력 하세요");
+      // let engScore = prompt("영어 점수를 입력 하세요");
+      // let avg = (mathScore + engScore) / 2;
+
+      // console.log(avg);
+
+      //문자형변환
+      // let num = 123;
+      // let a = num.string(num);
+      // console.log(typeof a);
+
+      // let b = num.toString();
+      // console.log(typeof b);
+
+      // let mathScore = Number(prompt("수학 점수를 입력해 주세요"));
+      // let engScore = Number(prompt("영어 점수를 입력해 주세요"));
+
+      // let avgscore = (mathScore + engScore) / 2;
+
+      // console.log("수학 점수 : ", mathScore);
+      // console.log("영어 점수 : ", engScore);
+      // console.log(avgscore);
+
+      // let mathScore = Number(prompt("수학 점수를 입력하세요"));
+      // let engScore = Number(prompt("영어 점수를 입력하세요"));
+
+      // console.log("mathScore :", mathScore);
+      // console.log("engScore :", engScore);
+      // let avg = (mathScore + engScore) / 2;
+
+      // console.log(avg);
+
+      //화살표 함수
+
+      //화살표 함수로 만들어 보기
+
+      // // 함수 선언문
+      // function test(name) {
+      //   console.log("hello, $name");
+      // }
+
+      // //함수 표현식
+      // function test1(name1) {
+      //   console.log("hello, $(name)");
+      // }
+
+      // function multifly(x, y) {
+      //   console.log(x * y);
+      // }
+      // console.log(multifly(3, 7));
+
+      // let square = num{console.log(num*num)}
+      // console.log(square(4))
+
+      //실습2
+      // let square = (num) => {
+      //   console.log(num * num);
+      // };
+      // console.log(square(4));
+      // console.log(square(11));
+      // console.log(square(5));
+
+      // onclick //
+      // function test() {
+      //   alert("TEST");
+      // }
+      // 실습 3. onclick & 함수만들기의 잘못된 예시
+
+      // let add = (a, b) => {
+      //   console.log(a + b);
+      // };
+      // let sub = (c, d) => {
+      //   console.log(c - d);
+      // };
+      // let divide = (a, b) => {
+      //   console.log(a / b);
+      // };
+      // let mul = (a, b) => {
+      //   console.log(a * b);
+      // };
+      // console.log(prompt(add));
+
+      // 실습 3. onclick & 함수만들기의 올바른 예시
+
+      // let a = Number(prompt("첫 번째 숫자를 입력해주세요."));
+      // let b = Number(prompt("두 번째 숫자를 입력해주세요."));
+      // let add = () => {
+      //   alert(a + b);
+      // };
+      // let sub = () => {
+      //   alert(a - b);
+      // };
+      // let divide = () => {
+      //   alert(a / b);
+      // };
+      // let mul = () => {
+      //   alert(a * b);
+      // };
+      // let part;
+
+      //실습 4,5//
+
+      // let age = Number(prompt("나이를 입력해주세요."));
+      // let sex = prompt("성별을 입력해주세요.");
+
+      // let role;
+      // if (age >= 20) {
+      //   role = "성인";
+      // } else if (age >= 17) {
+      //   role = "고등";
+      // } else if (age >= 14) {
+      //   role = "중등";
+      // } else if (age >= 8) {
+      //   role = "초등";
+      // } else if (age >= 0) {
+      //   role = "유아";
+      // }
+      // if (age < 20) {
+      //   if (sex == "남자") {
+      //     sex = "남학생";
+      //   } else {
+      //     sex = "여학생";
+      //   }
+      // }
+
+      // console.log(role, sex);
+
+      // console.log(${sex},role);
+
+      //3항 연산자
+      // let name = "진형"
+
+      // if (name === "진형"){
+      //   console.log("맞았어요");
+      // }else {console.log("틀렸어요")}
+
+      // // 위 if문을 3항 연산자로 표현한다면?
+
+      // name = "진형" ? console.log("맞았어요") : console.log("틀렸어요")
+
+      //실습6//
+      // let now = new Date().getHours();
+
+      // now < 13 ? console.log("오전입니다.") : console.log("오후입니다.");
+
+      for (let index = 0; index < 10; index++) {
+        console.log("인사를", i + 1, "번째 드립니다!");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <button onclick="add()">더하기</button>
+    <button onclick="sub()">빼기</button>
+    <button onclick="divide()">나누기</button>
+    <button onclick="mul()">곱하기</button> -->
+  </body>
+</html>
