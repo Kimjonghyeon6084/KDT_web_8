@@ -55,12 +55,12 @@
         $("ul").remove();
       }
       function emptyElement() {
-        // let standard = document.querySelector("li");
+        let standard = document.querySelector("li");
         // document.querySelector("ul").removeChild(standard);
         // removeChild () 부모를 선택하고 삭제할 자식 하나를 보내야 했다.
 
         // empty() : 선택된 자식들을 모두 삭제한다.
-        $("ul").empty();
+        $("ul").empty("ul");
       }
       function findParent() {
         // parent() : 부모 요소를 반환
@@ -89,19 +89,6 @@
     </script>
   </head>
   <body>
-    <ul>
-      <li>1</li>
-      <li id="li2">2</li>
-      <li id="li3">3</li>
-    </ul>
-
-    <button onclick="append()">append</button>
-    <button onclick="prepend()">prepend</button>
-    <button onclick="before()">before</button>
-    <button onclick="after()">after</button>
-    <button onclick="removeElement()">removeElement</button>
-    <button onclick="emptyElement()">emptyElement</button>
-
     <hr />
     <h5>요소 탐색</h5>
     <div class="ancestor">

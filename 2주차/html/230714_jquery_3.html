@@ -38,9 +38,10 @@
       }
 
       function hasClass() {
-        alert($("div".hasClass("css1")));
+        alert($("div").hasClass("css1"));
         //$().hasclass("클래스명")
-        $("div").addClass("css1");
+        $("div").hasClass("css1");
+        // console.log($("div".hasclass("css1")));
       }
 
       function toggleClass() {
@@ -60,7 +61,6 @@
     <button onclick="removeClass()">removeClass</button>
     <button onclick="hasClass()">hasClass</button>
     <button onclick="toggleClass()">toggleClass</button>
-
     <button onclick="switchClass()">switchClass</button>
   </body>
 </html>

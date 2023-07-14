@@ -10,6 +10,12 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
+
     <script>
       //$(선택자).함수();
       //$는 어디서 나온거냐?? -> jquery(선택자).함수();
@@ -19,24 +25,22 @@
         // document.getElementById("input").value = "안녕";
         $("#input").val("안녕");
       }
+      // document 로 요소를 선택하고, 그 요소가 input 일 때 value가져오기
+      // jquery 문법을 이용해서 input의 값 가져오기
       function getValue() {
-        // document 로 요소를 선택하고, 그 요소가 input 일 때 value가져오기
         // let value = document.getElementById("input").value;
-        // jquery 문법을 이용해서 input의 값 가져오기
-        let value = document.getElementById("input").value;
-        // $("input").val();
+        $("input").val("안녕하세요");
       }
       function changeStyle() {
         // let div = document.querySelector("div");
-        // div.style = "border: 10px solid black";
-        // $().css("속성", 속성값)
+        // $().css("속성", 속성값);
+        // div.style = "border: 100px solid black";
 
-        $("div").css("border", "10px soild black");
+        $("div").css("border", "100px soild black");
       }
       function changeText() {
-        // let div = document.querySelector("div");
-        // div.innerText = "Jquery 사용 전 글자 바꾸기";
-
+        let div = document.querySelector("div");
+        div.innerText = "Jquery 사용 전 글자 바꾸기";
         // $().text();
         $("div").text("<b>jquery 사용 후</b>");
       }
@@ -49,10 +53,10 @@
         $("a").attr("href", "http://www.google.com");
       }
       function changeHTML() {
-        // let div = document.querySelector("div");
-        // div.innerHTML = "Jquery 사용 전 글자 바꾸기";
-
+        let div = document.querySelector("div");
+        div.innerHTML = "Jquery 사용 전 글자 바꾸기";
         // $().html();
+
         $("div").html("<b>jquery 사용 후</b>");
       }
     </script>
@@ -71,7 +75,7 @@
   </head>
   <body>
     <a href="http://www.naver.com">naver</a>
-    <input type="text" id="input" />
+    <input type="text" id="input" value="" />
     <div class="div1"></div>
     <div class="div2"></div>
 
@@ -81,5 +85,11 @@
     <button onclick="changeText()">changeText</button>
     <button onclick="changeAttribute()">changeAttribute</button>
     <button onclick="changeHTML()">changeHTML</button>
+    <script>
+      // function setValue() {
+      //   // document.getElementById("input").value = "안녕";
+      //   $("#input").val("안녕");
+      // }
+    </script>
   </body>
 </html>
