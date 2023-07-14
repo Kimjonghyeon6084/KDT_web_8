@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .sun {
+        color: red;
+      }
+      .sat {
+        color: blue;
+      }
+      h1 {
+        text-align: center;
+        color: green;
+      }
+      div {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <span>날짜 : </span><input type="box" class="Date" />
+    <br />
+    <span>내용 : </span><input type="box" class="memo" />
+    <br />
+    <button>작성</button>
+    <br />
+    <div>
+      <h1>2023년 7월</h1>
+      <table style="width: 300px; height: 500px">
+        <tr>
+          <td class="sun">일</td>
+          <td>월</td>
+          <td>화</td>
+          <td>수</td>
+          <td>목</td>
+          <td>금</td>
+          <td class="sat">토</td>
+        </tr>
+        <tr>
+          <td class="sun"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1</td>
+          <td class="sat">2</td>
+        </tr>
+        <tr>
+          <td class="sun">3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td class="sat">9</td>
+        </tr>
+        <tr>
+          <td class="sun">10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td class="sat">16</td>
+        </tr>
+        <tr>
+          <td class="sun">17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td class="sat">23</td>
+        </tr>
+        <tr>
+          <td class="sun">24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td class="sat">30</td>
+        </tr>
+        <tr>
+          <td class="sun">31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="sat"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script>
+    let trs = $("table tr").children;
+    console.log("trs : ", trs);
+    console.log("trs[0] :", trs[0]);
+
+    $("button"), click(add);
+    for (let i = 9; i <= 39; i++) {
+      $(trs[i]).click(function () {
+        $(".date").val(`${i - 8}`);
+      });
+    }
+  </script>
+</html>
