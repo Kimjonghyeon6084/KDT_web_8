@@ -1,5 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head> </head>
-  <body></body>
+<html>
+  <head>
+    <style>
+      .header1 {
+        background-color: #f2f2f2;
+        padding: 10px;
+        display: flex; /* Flexbox 레이아웃을 사용합니다. */
+        justify-content: space-between; /* 요소들을 좌우로 정렬하고 간격을 분산시킵니다. */
+        align-items: center; /* 요소들을 수직 중앙에 정렬합니다. */
+      }
+      .menus li {
+        margin-left: 10px; /* 각 메뉴 아이템 사이의 간격을 주기 위해 margin-left를 사용합니다. */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header1">
+      <span>LOGO</span>
+      <ul class="menus">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+    </header>
+  </body>
 </html>

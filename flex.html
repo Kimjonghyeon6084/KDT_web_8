@@ -1,0 +1,141 @@
+<!-- @format -->
+​
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox 마스터1</title>
+    ​
+    <link rel="stylesheet" href="./flex.css" />
+    <style>
+      body {
+        font-size: 20px;
+        font-weight: 900;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      .header1 {
+        display: flex;
+        flex-direction: row;
+        background-color: lightgray;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header1 ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .header1 li {
+        margin: 10px 10px;
+      }
+      .header2 {
+        display: flex;
+        align-items: center;
+      }
+      .menus2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .header3 {
+        display: flex;
+        flex-direction: row;
+        background-color: lightgray;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header3 ul {
+        display: flex;
+        /* flex-direction: row; */
+      }
+      .header3 li {
+        margin: 5px 10px;
+      }
+      .header4 {
+        display: flex;
+        flex-direction: row;
+        background-color: lightgray;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header4 .menu-left ul {
+        display: flex;
+        flex-direction: row;
+        margin: 5px 0px 5px 0px;
+      }
+      .header4 .menu-right {
+        display: flex;
+        flex-direction: row;
+      }
+      .header4 li {
+        margin: 5px 10px;
+      }
+      h4 {
+        text-align: center;
+        background-color: pink;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flex를 이용해 여러 종류의 Header를 만들어보자!</h1>
+    ​
+    <!-- header1 -->
+    <header class="header1">
+      <span>LOGO</span>
+      <ul class="menus">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+    </header>
+    ​
+    <!-- header2 -->
+    <header class="header2">
+      <ul class="menus2">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+    </header>
+    ​
+    <!-- header3 -->
+    <header class="header3">
+      <span>LOGO</span>
+      <ul>
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+      <span>LOGIN</span>
+    </header>
+    ​
+    <h4>header 4는 선택입니다!</h4>
+    <!-- header4 -->
+    <header class="header4">
+      <div class="menu-left">
+        <span>LOGO</span>
+        <ul>
+          <li>MENU1</li>
+          <li>MENU2</li>
+          <li>MENU3</li>
+        </ul>
+      </div>
+      <ul class="menu-right">
+        <li>LOGIN</li>
+        <li>SIGNUUP</li>
+      </ul>
+    </header>
+  </body>
+</html>
