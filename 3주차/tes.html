@@ -3,9 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>html in html</title>
   </head>
   <body>
-    <h1>main</h1>
+    <h1>html TEST</h1>
+    <div id="contents">다른 html 집어넣기</div>
+    <script>
+      async function fetchHtmlAsText(url) {
+        return await (await fetch(url)).text();
+      }
+      async function importPage(target) {
+        document.querySelector("#" + target).innerHTML = await fetchHtmlAsText(
+          target + ".html"
+        );
+      }
+
+      importPage("contents");
+    </script>
   </body>
 </html>
