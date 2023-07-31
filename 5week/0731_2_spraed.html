@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // spread연산자(...연산자) , 보통 배열을 해체하여 쓸 때 쓰이는데 많이 쓰임
+      const a = [1, 2, 3];
+      const b = [4, 5];
+
+      //기존
+      const concat = a.concat(b);
+      console.log(concat);
+
+      //spread 연산자로(더욱 직관적인 코드)
+      const spread = [...a, ...b];
+      console.log(spread);
+      const person = {
+        name: "kjh",
+        age: 30,
+      };
+      console.log({ ...person });
+      //문자열
+      const c = "hello";
+      console.log(...c);
+
+      //rest 파라미터 // 함수에 씀
+
+      // function get(a, b, c) {
+      //   console.log(a, b, c);
+      // }
+      // get(10);
+
+      //작업할 때 10도 넣고 싶고 20도 넣고 싶을 때
+      //a가 없이 ...rest만 있으면 처음부터 다 받음, rest이기 때문에 뒤에 있어야 함
+
+      function get(a, ...rest) {
+        console.log(rest);
+      }
+      get(10, 20, 30, 40, 50);
+    </script>
+  </body>
+</html>

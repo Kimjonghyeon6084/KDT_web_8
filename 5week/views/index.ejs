@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/getForm" method="get">
+      이름<input type="text" name="name" />
+      <fieldset>
+        <legend>성별</legend>
+        <input type="radio" name="man" />남자
+        <input type="radio" name="woman" />여자
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>생년월일</legend>
+        <select name="year">
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option></select
+        >년
+        <select name="month">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option></select
+        >월
+        <select name="day" id="day">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option></select
+        >일
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>관심사</legend>
+        <input type="checkbox" />여행 <input type="checkbox" />패션
+        <input type="checkbox" />음식
+      </fieldset>
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <h4>GET요청</h4>
+    <form action="/getForm" method="get">
+      <input type="text" placeholder="id" name="id" required />
+      <input type="password" placeholder="pw" name="pw" required />
+      <button type="submit">제출</button>
+    </form>
+    <hr />
+    <h4>POST요청</h4>
+    <form action="/postform" method="post">
+      <input type="text" placeholder="id" name="id" readonly />
+      <input
+        type="password"
+        placeholder="pw"
+        name="pw"
+        pattern="^([a-z0-9]){8,12}"
+      />
+      <input type="email" required /><br />
+      <input type="radio" /><br />
+      <input type="checkbox" /><br />
+      <input type="tel:010" /><br />
+      <input type="number" /><br />
+      <input type="date" /><br />
+      <input type="time" /><br />
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html> -->
