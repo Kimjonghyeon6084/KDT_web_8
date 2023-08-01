@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // //배열
+      // //배열에 const를 쓴 이유 : 배열 자체는 못 바꾸는데 그 안에 있는 원소는 따로 접근하여 가능함.
+      // const lists = ["apple", "grape"];
+      // //기존방식
+      // console.log(lists[0], lists[1]);
+      // //구조분해 : 좀 더 직관적으로 볼 수 있다, 배열은 순서가 중요!!
+      // [item1, item2, item3 = "peach"] = lists;
+      // console.log(item1, item2);
+      // (배열에 const를 쓴 이유 : 배열 자체는 못 바꾸는데 그 안에 있는 원소는 따로 접근하여 가능함.) 의 설명임
+      // item1 = "peach";
+      // console.log(item1, item3);
+      // //교환
+      // let x = 1,
+      //   y = 3;
+      // [x, y] = [y, x];
+      // console.log(x, y);
+
+      //객체
+      const Person = {
+        //key(변수가 되는 값): value(할당되는 값)
+        name: "kjh",
+        age: 30,
+        gender: "M",
+        //함수, 배열도 넣을 수 있음
+        friends: ["Alex", "Kevien"],
+        hello: function () {
+          console.log("hello");
+        },
+        "j-1": "America",
+      };
+      //.으로 접근방법
+      console.log(Person.name);
+      // 다른 접근방법
+      Person.age = 29;
+      console.log(Person.age);
+      console.log(Person.friends[0]);
+      Person.hello();
+      //배열로 접근방법
+      console.log(Person["name"]); //이렇게 쓰는 경우는 key값이 하나의
+      // console.log(Person.['j-1']);
+      Person.city = "Seoul";
+      console.log(Person);
+      //예시. 배열안에 객체들이 들어간다. 객체명은 소문자, 대문자 상관 없지만 클래스는 대문자로 하기 때문에 소문자로 하는게 좋을 지도?
+      const Persons = [{}, {}, {}];
+      //객체 구조분해(키 값이 중요)
+      const { name, city: newCity, gender, key1 = "Hi" } = Person; // 혹시 위에서 const = city를 선언해버리는 상황이면 city:newCity로 선언해야 함
+      console.log(name, city, gender, key1); //위에 key값이 일치해야 함!
+    </script>
+  </body>
+</html>

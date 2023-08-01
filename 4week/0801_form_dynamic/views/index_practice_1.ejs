@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <form name="form" action="/index_practice_1" method="get">
+      <label for="user_name">이름 </label
+      ><input type="text" name="user_name" id="user_name" required />
+      <fieldset>
+        <legend>성별</legend>
+        <input
+          type="radio"
+          name="user_gender"
+          id="user_gender_male"
+          value="남자"
+          required
+        />
+        <label for="user_gender_male">남자</label>
+        <input
+          type="radio"
+          name="user_gender"
+          id="user_gender_female"
+          value="여자"
+          required
+        />
+        <label for="user_gender_female">여자</label>
+      </fieldset>
+      <fieldset>
+        <legend>생년월일</legend>
+        <select name="user_date_year" id="user_date_year">
+          <%for(let i=1990; i<=2023; i++) {%>
+          <option value="<%= i %>"><%= i %></option>
+          <% } %>
+        </select>
+        <label for="user_data_year">년</label>
+        <select name="user_date_month" id="user_date_month">
+          <%for(let i=1; i<=12; i++) {%>
+          <option value="<%= i %>"><%= i %></option>
+          <% } %>
+        </select>
+        <label for="user_date_month">월</label>
+        <select name="user_date_day" id="user_date_day">
+          <%for(let i=1; i<=31; i++) {%>
+          <option value="<%= i %>"><%= i %></option>
+          <% } %>
+        </select>
+        <label for="user_date_day">일</label>
+      </fieldset>
+      <fieldset>
+        <legend>관심사</legend>
+        <input
+          type="checkbox"
+          value="interest_trip"
+          id="interest_trip"
+          name="user_interest"
+        />
+        <label for="interest_trip">여행</label>
+        <input
+          type="checkbox"
+          value="interest_fashion"
+          id="interest_fashion"
+          name="user_interest"
+        />
+        <label for="interest_fashion">패션</label>
+        <input
+          type="checkbox"
+          value="interest_food"
+          id="interest_food"
+          name="user_interest"
+        />
+        <label for="interest_food">음식</label>
+      </fieldset>
+
+      <button type="submit">submit</button>
+      <button type="button" onclick="getUserInfoByAxios()">회원가입</button>
+    </form>
+    <script>
+      function getUserInfoByAxios() {
+        const form = document.forms["form"];
+        const checkbox = [];
+
+        for (let item of document.querySelectorAll(
+          'input[name="user_interest"]'
+        )) {
+          if (item.checked) {
+            checkbox.push(item.value);
+          }
+        }
+
+        const data = {
+          name: form.user_name.value,
+          gender: form.user_gender.value,
+          year: form.user_date_year.value,
+          month: form.user_date_month.value,
+          day: form.user_date_day.value,
+          interest: checkbox,
+        };
+
+        axios({
+          method: "GET",
+          url: "/index_practice_1",
+          params: data,
+        }).then((res) => {
+          console.log(res);
+          document.querySelector(".result_container").innerHTML = `
+                <h1>${res.data.name} ${res.data.gender} ${res.data.year}년 ${res.data.month}월 ${res.data.day}일 ${res.data.interest}</h1>
+                `;
+        });
+      }
+    </script>
+  </body>
+</html>
