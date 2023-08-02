@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>form single연습</h1>
+    <form action="/uploads" method="post" enctype="multipart/form-data">
+      <!-- enctype="multipart/form-data" 넣는거 필수 -->
+      <input type="file" name="userfile" /><br />
+      <input type="text" name="title" /><br />
+      <button type="submit">업로드</button>
+    </form>
+    <br />
+    <br />
+    <h1>form multer 연습(ver1)</h1>
+    <form action="/uploads/array" method="post" enctype="multipart/form-data">
+      <input type="file" name="userfiles" multiple /><br />
+      <input type="text" name="title" /><br />
+      <button type="submit">업로드</button>
+    </form>
+    <br />
+    <br />
+    <h1>form multer 연습(ver2)</h1>
+    <form action="/upload/fields" method="post" enctype="multipart/form-data">
+      <input type="file" name="userfile1" /><br />
+      <input type="text" name="title1" /><br />
+      <input type="file" name="userfile2" /><br />
+      <input type="text" name="title2" /><br />
+      <button type="submit">업로드</button>
+    </form>
+    <br />
+    <br />
+    <h1>동적 파일 업로드</h1>
+    <input type="file" name="dynamic-userfile" id="dynamic-file" /><br />
+    <button type="button" onclick="fileupload()">업로드</button>
+    <br />
+    <div class="reslut"></div>
+
+    <script>
+      const resultBox = document.querySelector(".result");
+      function fileupload() {
+        const file = document.getElementById("dynmaic-file");
+        console.log(file.files[0]);
+        // 폼 형식으로 넣어주기(백엔드는 폼형태로 받기 때문에)
+        const formData = new FormData();
+        formData.append("dynamic-userfile", file.files[0]);
+
+        axios({
+          method: "post",
+          url: "/dynamicFile",
+          data: formData,
+          headers: {
+            "content-type": "multipart/form-data",
+          },
+        }).then((res) => {
+          console.log("res", res);
+          resultBox.innerHTML = `<div><img src=${res.data.path} ></div>`;
+        });
+      }
+    </script>
+  </body>
+</html>

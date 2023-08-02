@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>개인정보</h1>
+    아이디:<input type="text" name="userid" /> <br />
+    비밀번호:<input type="password" name="userpasssword" /><br />
+    이름:<input type="text" name="name" /><br />
+    나이:<input type="text" name="age" /><br />
+    <label for="post">프로필 사진 : </label>
+    <input type="file" name="dynamic-userfile" id="dynamic-file" /><br />
+    <button type="reset">리셋</button>
+    <button type="button">회원가입</button>
+    <br />
+    <div class="reslut"></div>
+    <script>
+      const resultBox = document.querySelector(".result");
+      function fileupload() {
+        const file = document.getElementById("dynmaic-file");
+        console.log(file.files[0]);
+        // 폼 형식으로 넣어주기(백엔드는 폼형태로 받기 때문에)
+        const formData = new FormData();
+        formData.append("dynamic-userfile", file.files[0]);
+
+        axios({
+          method: "post",
+          url: "/dynamicFile",
+          data: formData,
+          headers: {
+            "content-type": "multipart/form-data",
+          },
+        }).then((res) => {
+          console.log("res", res);
+          resultBox.innerHTML = `<div><img src=${res.data.path} ></div>`;
+        });
+      }
+    </script>
+  </body>
+</html>
