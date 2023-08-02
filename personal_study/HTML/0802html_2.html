@@ -1,0 +1,29 @@
+<!--간단한 웹페이지 스타일링-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!---이미지 중간으로 오게 하고 싶다면 display: block; margin-left: auto; margin-right: auto 하면 중간으로 옴>-->
+    <img
+      src="./33.jpeg"
+      style="
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      "
+    />
+    <!--size, famliy-->
+    <h3 style="font-size: 50px; letter-spacing: 10px; text-align: center">
+      기본적인 웹페이지 만들기
+    </h3>
+    <!-- 태그 안에 특정 글씨만 다른 스타일을 주고 싶은 때엔 span 태그로 따로 만들어 span태그에만 스타일을 주는 걸로 해보자-->
+    <!--글자 굵기 조절하기 위해선 font-weight 속성이나, <strong>태그를 써보자-->
+    <p><span style="color: red">Front-end</span> <strong>Developer</strong></p>
+  </body>
+</html>

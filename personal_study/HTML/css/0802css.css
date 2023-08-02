@@ -1,0 +1,14 @@
+.coffee {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* css 스타일링 할때 id > class > 태그 선택자 순임 */
