@@ -8,32 +8,46 @@
   </head>
   <body>
     <div class="alert-box" id="alert">
-      <p id="content">아이디를 입력해주요</p>
+      <p id="content" class="title">아이디를 입력해주요</p>
       <button id="close">닫기</button>
     </div>
 
-    <button onclick="input('alert', 'block', 'content', '아이디를 입력하세요')">
-      버튼1
-    </button>
-    <button
-      onclick="input('alert', 'block', 'content', '비밀번호를 입력하세요.')"
-    >
-      버튼2
-    </button>
+    <button onclick="alert_open()">버튼1</button>
+    <button onclick="alert_open2()">버튼2</button>
 
     <script>
       //javascript의 이벤트리스터 문법
+      // document.getElementById("close").addEventListener("click", function () {
+      //   document.getElementById("alert").style.display = "none";
+      // });
+
+      // function alert2(a, b) {
+      //   document.getElementById(a).style.display = b;
+      // }
+      // function input(a, b, c, d) {
+      //   document.getElementById(a).style.display = b;
+      //   document.getElementById(c).innerHTML = d;
+      // }
+      function alert_open() {
+        document.getElementById("alert").style.display = "block";
+        document.getElementById("content").innerHTML = "아이디를 입력해주세요.";
+      }
+      function alert_open2() {
+        document.getElementById("alert").style.display = "block";
+        document.getElementById("content").innerHTML =
+          "비밀번호를 입력해주세요.";
+      }
+      // function alert_close() {
+      //   document.getElementById("alert").style.display = "none";
+      // }
+      //
       document.getElementById("close").addEventListener("click", function () {
         document.getElementById("alert").style.display = "none";
       });
-
-      function alert2(a, b) {
-        document.getElementById(a).style.display = b;
-      }
-      function input(a, b, c, d) {
-        document.getElementById(a).style.display = b;
-        document.getElementById(c).innerHTML = d;
-      }
+      //addEventListener : 위에 'click 대신 들어갈 이벤트 종류가 많으므로, 다른 것을 쓰려면 구글링 하도록!'
+      // getElementByClassName()
+      // class는 여러개가 중복가능하게 설정이 되지만, id는 중복되면 안됨
+      // 그러므로 getElementByClassName을 쓸때 중복되는 요소가 있다면 getElementByClassName()[0] 이런식으로 순서를 정해줄 수 있다.
     </script>
   </body>
 </html>
