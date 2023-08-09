@@ -1,11 +1,9 @@
 const express = require("express");
-const mywql = require("mysql");
 const app = express();
 const PORT = 8000;
 
 app.set("view engine", "ejs");
 app.set("views", "./views");
-//폼 만들어야 하니 body-parser 필수
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

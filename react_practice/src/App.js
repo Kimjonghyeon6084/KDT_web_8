@@ -1,3 +1,4 @@
+/*eslint-disable*/
 // import logo from "./logo.svg";
 import { useState } from "react";
 import "./App.css";
@@ -12,29 +13,39 @@ function App() {
     "파이썬 독학",
   ]);
 
-  let num = [1, 2];
   return (
     <div className="App">
+      <button
+        onClick={() => {
+          let copy = [...practice];
+          copy.sort();
+          setPractice(copy);
+        }}
+      >
+        글자순으로 배열하기
+      </button>
       <div className="blakc-nav">
-        <h4>{practice[0]}</h4>
+        <h4>ReactBlog</h4>
       </div>
       <div className="list">
-        <h4>{a}</h4>
+        <h4>
+          {practice[0]}
+          <span> 좋아요</span>
+        </h4>
         <p>2월 17일 발행</p>
+        <hr />
       </div>
-      <div className="blakc-nav">
+      <div className="blakc-nav"></div>
+      <div className="list">
         <h4>{practice[1]}</h4>
-      </div>
-      <div className="list">
-        <h4>{a}</h4>
         <p>2월 17일 발행</p>
+        <hr />
       </div>
-      <div className="blakc-nav">
+      <div className="blakc-nav"></div>
+      <div className="list">
         <h4>{practice[2]}</h4>
-      </div>
-      <div className="list">
-        <h4>{a}</h4>
         <p>2월 17일 발행</p>
+        <hr />
       </div>
     </div>
   );
