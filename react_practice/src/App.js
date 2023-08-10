@@ -1,4 +1,3 @@
-/*eslint-disable*/
 // import logo from "./logo.svg";
 import { useState } from "react";
 import "./App.css";
@@ -12,6 +11,7 @@ function App() {
     "강남 우동 맛집",
     "파이썬 독학",
   ]);
+  let [modal, setModal] = useState(false);
 
   return (
     <div className="App">
@@ -47,6 +47,26 @@ function App() {
         <p>2월 17일 발행</p>
         <hr />
       </div>
+      <div>
+        <button
+          onClick={() => {
+            setModal(true);
+          }}
+        >
+          글수정
+        </button>
+        {modal == true ? <Modal></Modal> : null}
+      </div>
+    </div>
+  );
+}
+
+function Modal() {
+  return (
+    <div className="modal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
     </div>
   );
 }
