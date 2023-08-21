@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <label for="name">이름</label>
+        <input type="text" id="name" required />
+
+        <br />
+        <button type="button" onclick="postSubmit()">제출</button><br />
+    </body>
+    <script>
+        function postSubmit() {
+            const name = document.getElementById('name').value;
+            console.log(name);
+        }
+    </script>
+</html>

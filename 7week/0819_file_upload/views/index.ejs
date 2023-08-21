@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>파일 업로드</title>
+  </head>
+  <body>
+    <h1>파일 업로드 하기</h1>
+
+    <!--일반 폼 전송-->
+    <!--여러 파일 전송시 input 태그 뒤에 muliple 붙이면 됨-->
+    <h2>하나의 input에서 하나의 파일 업로드</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="userFile" />
+      <br />
+      <input type="text" />
+      <br />
+      <button type="submit">업로드</button>
+    </form>
+    <br />
+    <h2>하나의 input에서 여러 파일 업로드</h2>
+    <form action="/upload/array" method="post" enctype="multipart/form-data">
+      <input type="file" name="userFile" multiple />
+      <br />
+      <input type="text" />
+      <br />
+      <button type="submit">업로드</button>
+    </form>
+    <br />
+    <h2>하나의 input에서 여러 파일 업로드2</h2>
+    <form action="/upload/fields" method="post" enctype="multipart/form-data">
+      <input type="file" name="userFile1" />
+      <br />
+      <input type="text" name="tilte1" />
+      <br />
+      <input type="file" name="userFile2" />
+      <br />
+      <input type="text" name="title2" />
+      <br />
+      <button type="submit">업로드</button>
+    </form>
+    <br />
+    <h2>동적 파일 업로드</h2>
+    <form name="dynamic_userFile">
+      <input type="file" name="dynamic_userFile" id="dynamic_userFile" />
+      <button type="button" onclick="fileUpload()">업로드</button>
+      <br />
+      <img src="" width="100px" />
+    </form>
+    <script>
+      function fileUpload() {
+        const formData = new FormData();
+        //form 태그의 데이터를 동적으로 제어할 수 있는 기능
+        const file = document.getElementById("dynamic_userFile");
+        console.log(file.files[0]);
+        formData.append("dynamic_userFile", file.files[0]);
+
+        axios({
+          method: "POST",
+          url: "/dynamicFile",
+          data: formData,
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }).then(function (res) {
+          console.log(res);
+          console.log(res.data);
+          console.log(res.data.path);
+          document.querySelector("img").src = res.data.path;
+        });
+      }
+    </script>
+  </body>
+</html>

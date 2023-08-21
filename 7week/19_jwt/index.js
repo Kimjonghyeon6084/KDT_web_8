@@ -4,6 +4,7 @@ const app = express();
 const PORT = 8000;
 const SECRET = "secretKey";
 const userInfo = { id: "kdt8", pw: "1234", name: "김종현" };
+require;
 
 app.set("view engine", "ejs");
 app.set("views", "./views");
