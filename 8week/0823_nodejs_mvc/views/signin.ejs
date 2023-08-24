@@ -30,6 +30,8 @@
     }).then(res => {
       if (res.data.result) {
         alert(`${res.data.data.name}님 로그인 성공`)
+        //로그인 했으니 페이지 이동
+        document.location.href = `/profile/${res.data.data.id}`
       } else {
         alert('로그인이 실패하였습니다.');
         document.location.reload();

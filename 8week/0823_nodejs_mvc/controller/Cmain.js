@@ -12,6 +12,12 @@ const signup=(req,res) => {
 const signin=(req,res) => {
     res.render('signin');
 };
+//회원정보 조회
+const profile = (req,res) => {
+    console.log(req.params);
+    model.db_profile(req.params), (result) => {
+        res.render('profile', {data : result[0]});
+    }};
 
 
 //----------------------------------------//
@@ -33,6 +39,15 @@ const post_signin = (req,res) => {
     });
 };
 
+//----------------------------------------//
+//PATCH
+const edit_profile = (req,res) => {
+    model.db_profile_edit(req.body, () => {
+        res.json({result:true});
+    })
+};
+
+
 //res.render :  뷰페이지(node.js가 제공하는 템플릿)를 렌더링, render(뷰페이지이름, 데이터(선택사항))
 //res.send : 모든 타입의 데이터 전송(모든 타입?? >> 문자열, 배열, 객체, 숫자, 등)
 //res.json : 객체타입 데이터 전송
@@ -41,6 +56,8 @@ module.exports = {
     main,
     signin,
     signup,
+    profile,
+    edit_profile,
     post_signup,
     post_signin,
 };
