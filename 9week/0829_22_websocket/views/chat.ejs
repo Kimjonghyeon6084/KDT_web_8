@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/socket.io/socket.io.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="space"></div>
+  <form id="chat">
+    <input type="text" id="message" placeholder="채팅내용">
+    <button>채팅</button>
+  </form>
+  <script>
+    const socket = io();
+    const space = document.querySelector('#space');
+    const chatroom = prompt('채팅방을 입력하세요: ')
+    socket.emit('join', chatroom)
+    const chatForm = document.querySelector('#chat');
+
+    socket.on('userjoin', (message) => {
+      console.log(message)
+    })
+    //백엔드에서 chat을 받는 거임
+    socket.on('chat', (message) => {
+      const p =document.createElement('p');
+      p.textContent = message;
+      space.appendChild(p)
+    })
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const msg = chatForm.querySelector('#message');
+      socket.emit('message', msg.value);
+      msg.value = '';
+    })
+    //사용자가 바뀌었을 때 한명은 오른쪽, 한명은 왼쪽으로 표시될 수 있게..??
+    
+  </script>
+</body>
+</html>
