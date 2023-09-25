@@ -17,6 +17,8 @@ class Counter extends Component {
   }
 
   handleDecreament = () => {
+    //setState는 호출 직후에 상태가 바로 업데이트 되지 않는다.
+    //react는 여러 setState 호출을 일괄 처리
     // this.setState({number: this.state.number - 1})
     // this.setState({number: this.state.number - 1})
     this.setState((prevState2) => ({numer: prevState2.number - 1}))

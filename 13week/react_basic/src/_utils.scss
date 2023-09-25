@@ -1,0 +1,31 @@
+//_utils.scss
+//SCSS파일명 앞에 _ 를 붙여서 작성하면 파일단위로 분리되어 컴파일 되지 않는다.
+
+// $color-red: #ff0000;
+// $color-orange: rgb(234, 168, 45);
+// $color-yellow: rgb(229, 229, 53);
+// $color-green: rgb(67, 220, 67);
+// $color-blue: rgb(23, 23, 162);
+// $color-navy: rgb(1, 1, 100);
+// $color-purple: rgb(163, 52, 163);
+
+$color-red: red;
+$color-orange: orange;
+$color-yellow: yellow;
+$color-green: green;
+$color-blue:blue;
+$color-pink:pink;
+
+
+
+
+
+// @mixin box($size) {
+//   width: $size;
+//   height: $size;
+// }
+@mixin circle($size) {
+  width: 100px;
+  height: 100px;
+}
+

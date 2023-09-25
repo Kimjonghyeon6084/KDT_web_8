@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  /* display: flex; */
+}
+
+h1 {
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(130, 130, 216);
+  margin-top: 0px;
+  width: 100%;
+  height: 45px;
+}
+
+.post-container {
+  margin-left: 100px;
+  width: 1000px;
+  height: 150px;
+  background-color: aqua;
+  border-radius: 6px;
+  
+}
+h4 {
+padding: 20px;
+}
+
+p {
+  padding: 0px 0px 20px 20px
+}

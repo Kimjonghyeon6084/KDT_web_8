@@ -5,7 +5,18 @@ const FunctionPractice = () => {
   // userName = document.querySelector('#name');
   // userTitle = document.querySelector('#title');
   const [add, setAdd] = useState([]);
-  const [serach, setSerach] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
+
+  const handleSearch = () => {
+    const searchValue = document.getElementById('search').value;
+    const filteredResults = add.filter((item) => {
+      return item.id.toString() === searchValue;
+    });
+
+    setSearchResult(filteredResults);
+  };
+
+  
 
   //작성 버튼 클릭시 작성자 이름과 작성 제목이 테이블 요소에 들어가도록.
 
@@ -29,8 +40,8 @@ const FunctionPractice = () => {
         <option>작성자</option>
         <option>제목</option>
       </select>
-      <input></input>
-      <button>검색</button>
+      <input id='serach'></input>
+      <button onClick={handleSearch}>검색</button>
 
       <table border={1}>
         <th>번호</th>
@@ -45,6 +56,21 @@ const FunctionPractice = () => {
                   <td>{item.title}</td>
                   <td>{item.name}</td>
                 </tr>
+                <tbody>
+          {searchResult.length > 0 ? (
+            searchResult.map((item, index) => (
+              <tr key={index}>
+                <td>{item.id}</td>
+                <td>{item.title}</td>
+                <td>{item.name}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="3">검색 결과가 없습니다.</td>
+            </tr>
+          )}
+        </tbody>
               </>
             )
           })
@@ -54,7 +80,11 @@ const FunctionPractice = () => {
   ) 
 }
 
+//배열
+//spraed 이용해보기
+
 
 
 
 export default FunctionPractice
+

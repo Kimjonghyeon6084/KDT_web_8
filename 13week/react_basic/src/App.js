@@ -34,8 +34,29 @@ import EventClass from "./0920_EventClass"
 import Message from "./0920_message"
 import Counter from "./0920_Counter"
 import ChangeColor from "./0920_practice1"
+import Board from "./0920_practice3"
+import CounterFunc from "./0921_CounterFunc"
+import ToggleFunc from "./0921_ToggleFunc"
 import FunctionPractice from "./0920_practice_3"
-
+import ContentFunc from "./0921_practice3"
+import UseStatePrac5 from "./0921_practice5"
+import LifeCycleClass from "./0922_LifeCycleClass"
+import LifeCycleFunc from "./0922_UseEffect"
+import UseEffectFuncPractice1 from "./0922_UseEffectFuncPreactice1"
+import RefSample from "./0923_Useref1"
+import RefSample2 from "./0923_refSample2"
+import UseRef2 from "./0923_UseRef2"
+import UseMemo from './0923_UseMemo'
+import ParentCompnent from './0923_UseCallback'
+import UseCallback2 from "./0923_UseCallback2"
+import UseReducer from "./0923_UseReducer"
+import LoginPage from "./0923_LoginPage"
+import Style from "./0925_Style"
+import SassComponent from "./0925_SassComponent"
+// import Lavar from "./0925_Practice1"
+import Practice2 from "./0925_Practice1"
+import StyledComponent from './0925_StyledComponent'
+import StyledComponentPrac2 from "./0925_StyleComponetPrac2"
 
 function App () {
   return(
@@ -45,10 +66,34 @@ function App () {
       <Message></Message> */}
       {/* <Counter></Counter> */}
       {/* <ChangeColor></ChangeColor> */}
-      <FunctionPractice></FunctionPractice>
+      {/* <Board></Board> */}
+      {/* <CounterFunc></CounterFunc> */}
+      {/* <ToggleFunc></ToggleFunc> */}
+      {/* <FunctionPractice></FunctionPractice> */}
+      {/* <ContentFunc></ContentFunc> */}
+      {/* <UseStatePrac5></UseStatePrac5> */}
+      {/* <LifeCycleClass></LifeCycleClass> */}
+      {/* <LifeCycleFunc></LifeCycleFunc> */}
+      {/* <UseEffectFuncPractice1></UseEffectFuncPractice1> */}
+      {/* <RefSample></RefSample> */}
+      {/* <RefSample2></RefSample2> */}
+      {/* <UseRef2/> */}
+      {/* <UseMemo/> */}
+      {/* <ParentCompnent/> */}
+      {/* <UseCallback2></UseCallback2> */}
+      {/* <UseReducer></UseReducer> */}
+      {/* <LoginPage/> */}
+      {/* <Style/> */}
+      {/* <SassComponent/> */}
+      {/* <Lavar/> */}
+      {/* <Practice2/> */}
+      {/* <StyledComponent/> */}
+      <StyledComponentPrac2></StyledComponentPrac2>
+    
     </>
   )
-
 }
 
 export default App
+
+
