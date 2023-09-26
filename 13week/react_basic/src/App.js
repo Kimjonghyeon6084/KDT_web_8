@@ -57,6 +57,9 @@ import SassComponent from "./0925_SassComponent"
 import Practice2 from "./0925_Practice1"
 import StyledComponent from './0925_StyledComponent'
 import StyledComponentPrac2 from "./0925_StyleComponetPrac2"
+// import Router from './0926_Router'
+import Header from "./0926_12Router/Header"
+import { Outlet } from "react-router-dom"
 
 function App () {
   return(
@@ -88,8 +91,12 @@ function App () {
       {/* <Lavar/> */}
       {/* <Practice2/> */}
       {/* <StyledComponent/> */}
-      <StyledComponentPrac2></StyledComponentPrac2>
-    
+      {/* <StyledComponentPrac2></StyledComponentPrac2> */}
+      {/* //버전1
+      <Router/> */}
+      {/* //버전2 */}
+      <Header/>
+      <Outlet/>
     </>
   )
 }
