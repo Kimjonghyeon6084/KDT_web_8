@@ -1,4 +1,4 @@
-/* .container {
+.container {
   width: 500px;
   height: 500px;
   background-color: white;
@@ -70,8 +70,8 @@ img {
   width: 350px;
   height: 70px;
   z-index: 7;
-} */
-.container {
+}
+/* .container {
   width: 500px;
   height: 500px;
   background-color: aqua;
@@ -120,4 +120,4 @@ img {
   background-color: darkgoldenrod;
   width: 100px;
   height: 100px;
-}
+} */

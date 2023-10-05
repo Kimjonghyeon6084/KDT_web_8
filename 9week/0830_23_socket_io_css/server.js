@@ -78,6 +78,8 @@ io.on('connection', (socket) => {
         if (message.user === 'all') {
             io.to(socket.room).emit('newMessage', message.message, message.nick, false);
         } else {
+            console.log(message.user);
+            
             io.to(message.user).emit('newMessage', message.message, message.nick, true);
             //자기자신에게 메세지 띄우기
             socket.emit('newMessage', message.message, message.nick, true);

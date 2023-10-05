@@ -10,7 +10,6 @@
   "name": "20_secret",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start": "cross-env NODE_ENV=dev node index.js",
     "start:prod": "cross-env NODE_ENV=dev node index.js",

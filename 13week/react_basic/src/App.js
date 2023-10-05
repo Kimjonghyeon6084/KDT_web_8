@@ -53,15 +53,29 @@ import UseReducer from "./0923_UseReducer"
 import LoginPage from "./0923_LoginPage"
 import Style from "./0925_Style"
 import SassComponent from "./0925_SassComponent"
-// import Lavar from "./0925_Practice1"
 import Practice2 from "./0925_Practice1"
 import StyledComponent from './0925_StyledComponent'
 import StyledComponentPrac2 from "./0925_StyleComponetPrac2"
-// import Router from './0926_Router'
 import Header from "./0926_12Router/Header"
 import { Outlet } from "react-router-dom"
+import languageProvider from "./1004_14_Context/LangProvider"
+import ThemeProvider from "./1004_14_Context/store/theme-context"
+import LanguageSelecter from "./1004_14_Context/LangSelector"
+import ThemeSelecter from './1004_14_Context/ThemeSelector'
+import { CartProvider } from "./1005_ConText_prac2/store/cart-context"
+import ProductList from "./1005_ConText_prac2/ProductList"
+import Cart from './1005_ConText_prac2/Cart'
+
+
+
+
+
+
 
 function App () {
+
+  // const [language, setLanguage] = useState('ko');
+
   return(
     <>
       {/* <Event></Event>
@@ -95,8 +109,17 @@ function App () {
       {/* //버전1
       <Router/> */}
       {/* //버전2 */}
-      <Header/>
-      <Outlet/>
+      {/* <Header/>
+      <Outlet/> */}
+      {/* <ThemeProvider>
+        <LanguageSelecter/>
+        <ThemeSelecter/>
+      </ThemeProvider> */}
+
+      <CartProvider>
+        <ProductList/>
+        <Cart/>
+      </CartProvider>
     </>
   )
 }
