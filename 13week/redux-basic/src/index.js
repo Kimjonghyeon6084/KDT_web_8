@@ -1,6 +1,10 @@
 // ////redux를 이용한 코드
 import {createStore} from 'redux';
-
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import {Provider} from 'react-redux'
+import store from './store/legacy'
 // const add = document.querySelector('#add')
 // const minus = document.querySelector('#minus')
 // const num = document.querySelector('#num')
@@ -69,56 +73,120 @@ import {createStore} from 'redux';
 //   num.textContent = count;
 // });
 
+// ---------------------------------------------------------------------------------
+
 //practice
 
-const add = document.querySelector('#add');
-const del = document.querySelector('.delete')
-const list = document.querySelector('#list');
-const input = document.querySelector('#input');
-const ADD = 'add';
+// const add = document.querySelector('#add');
+// const del = document.querySelector('.delete')
+// const list = document.querySelector('#list');
+// const input = document.querySelector('#input');
+// const ADD = 'add';
 
-const listReducer = (list = [], action) => {
-  switch (action.type) {
-    case 'add':
-      return [...list, {text: action.title, id: Date.now()}]
-    case 'delete':
-      return list.filter((toDo) => toDo.id !== action.id)
-    default:
-      return list;
-  }
-}
+// const listReducer = (list = [], action) => {
+//   switch (action.type) {
+//     case 'add':
+//       return [...list, {text: action.title, id: Date.now()}]
+//     case 'delete':
+//       return list.filter((toDo) => toDo.id !== action.id)
+//     default:
+//       return list;
+//   }
+// }
 
-const listStore = createStore(listReducer);
+// const listStore = createStore(listReducer);
 
-listStore.subscribe(() => {
-  list.innerHTML = "";
-  for (let item of listStore.getState()) {
-    const li = document.createElement("li");
-    li.innerHTML = `${item.text}`;
-    li.name = `${item.id}`;
-    const btn = document.createElement("button");
-    btn.innerText = "DEL";
-    btn.addEventListener("click", (e) => {
-      listStore.dispatch({ type: 'delete', id: item.id});
-    });
-    li.appendChild(btn);
-    list.appendChild(li);
-  }
-});
+// listStore.subscribe(() => {
+//   list.innerHTML = "";
+//   for (let item of listStore.getState()) {
+//     const li = document.createElement("li");
+//     li.innerHTML = `${item.text}`;
+//     li.name = `${item.id}`;
+//     const btn = document.createElement("button");
+//     btn.innerText = "DEL";
+//     btn.addEventListener("click", (e) => {
+//       listStore.dispatch({ type: 'delete', id: item.id});
+//     });
+//     li.appendChild(btn);
+//     list.appendChild(li);
+//   }
+// });
 
-add.addEventListener('click', () => {
-  const li = document.createElement('li')
-  const value = input.value
-  li.innerHTML = `
-  <li class='list'>${value}<button class='delete'>DEL</button></li>
-  `
-  list.appendChild(li)
-  listStore.dispatch({type: ADD, title: value})
-})
+// add.addEventListener('click', () => {
+//   const li = document.createElement('li')
+//   const value = input.value
+//   li.innerHTML = `
+//   <li class='list'>${value}<button class='delete'>DEL</button></li>
+//   `
+//   list.appendChild(li)
+//   listStore.dispatch({type: ADD, title: value})
+// })
 
-del.addEventListener('click', () => {
-  console.log('1');
+// del.addEventListener('click', () => {
+//   console.log('1');
   
-  listStore.dispatch({type:'delete'})
-})
+//   listStore.dispatch({type:'delete'})
+// })
 
+// ----------------------------------------------------------------------------------
+//practice
+// const input = document.querySelector('input');
+// const form = document.querySelector('form');
+// const ul = document.querySelector('ul');
+
+// const ADD_TODO = 'ADD_TODO';
+// const DELETE_TODO = 'DELETO_TODO';
+
+// //reducer
+// const reducer = (state = [], action) => {
+//     console.log(action);
+//     switch (action.type) {
+//         case ADD_TODO:
+//             const newTodo = { text: action.text, id: Date.now() };
+//             return [...state, newTodo];
+//         case DELETE_TODO:
+//             return state.filter((el) => el.id !== action.id);
+//         default:
+//             return state;
+//     }
+// };
+// //store
+// const store = createStore(reducer);
+
+// const removeTodo = (event) => {
+//     event.preventDefault();
+//     console.log(event);
+//     store.dispatch({ type: DELETE_TODO, id: Number(event.target.parentNode.id) });
+// };
+// //subscribe 스토어의 데이터가 변경될때 ( ) 안에있는 함수가 실행
+// //store.subscribe(() => console.log(store.getState()));
+// store.subscribe(() => {
+//     const todos = store.getState();
+//     ul.innerHTML = '';
+//     todos.map((value) => {
+//         //console.log(value);
+//         const li = document.createElement('li');
+//         const btn = document.createElement('button');
+//         btn.innerText = '삭제';
+//         btn.addEventListener('click', removeTodo); //삭제이벤트
+//         li.innerText = value.text;
+//         li.id = value.id;
+//         li.appendChild(btn);
+//         ul.appendChild(li);
+//     });
+// });
+
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     store.dispatch({ type: ADD_TODO, text: input.value });
+//     input.value = '';
+// });
+// ----------------------------------------------------------------------------------
+//react-redux
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>
+)
