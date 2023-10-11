@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+  </div>
+  <script>
+    // let 변수 = 1;
+
+    // //+연산자는 피연산자의 값을 변경하는 암묵적 할당이 이뤄진다.
+    // 변수++;
+    // console.log(변수); // 2
+
+    // //--연산자는 피연산자의 값을 변경하는 암묵적 할당이 이뤄진다.
+    // 변수--;
+    // console.log(변수); // 1
+    
+    // let 변수 = 5, result;
+
+    // //선할당 후증가
+    // result = 변수++;
+    // console.log(변수); // 5 6
+
+    // //선증가 후할당
+    // result = ++변수;
+    // console.log(변수); // 7 7
+
+    // //선할당 후감소
+    // result = 변수--;
+    // console.log(변수); // 7 6
+
+    // //선감수 후할당
+    // result = --변수;
+    // console.log(변수); // 5 5
+    
+    // let x = '1';
+
+    // //문자열을 숫자로 타입 변환한다.
+    // console.log(+x); // 1
+    // //부수 효과는 없다
+    // console.log(x); // '1'
+    
+    // //불리언 값을 숫자로 타입 변환한다.
+    // x = true;
+    // console.log(+x); // 1
+    // //부수 효과는 없다.
+    // console.log(x); // true
+
+    // //불리언 값을 숫자로 타입 변환한다.
+    // x = false;
+    // console.log(+x); // 0
+    // //부수 효과는 없다.
+    // console.log(x); // false    
+
+    // //문자열을 숫자로 타입 변환할 수 없으므로 NaN을 반환한다.
+    // x = 'hello';
+    // console.log(x); // NaN
+    // //부수 효과는 없다.
+    // console.log(x); // 'hello'
+
+    // //부호를 반전한다.
+    // -(-10); // -> 10
+    // //문자열을 숫자로 타입 변환한다.
+    // -'10' // -> -10
+    // //불리언 값을 숫자로 타입 변환한다.
+    // -true // -1
+    // //문자열은 숫자로 타입 변환할 수 없으므로 NaN를 반환한다.
+    // -'hello' // -> NaN
+    
+    // //문자열 연결 연산자
+    // '1' + 2 // 12
+    // 1 + '2' // 12
+
+    // //true는 1로 타입 변환된다.
+    // 1 + true // 2
+
+    // //false는 0으로 타입 변환된다.
+    // 1 + false // 0
+
+    // //null은 0으로 타입 변환된다.
+    // 1 + null // 1
+
+    // //undefined는 숫자로 타입 변환되지 않는다.
+    // +undefined // NaN
+    // 1 + undefined // NaN
+    
+    // //NaN은 자신과 일치하지 않는 유일한 값이다.
+    // NaN === NaN; // false
+    
+    // //Number.isNaN 함수는 지정한 값이 NaN인지 확인하고 그 결과를 불리언 값으로 반환힌다.
+    // Number.isNaN(NaN); // true
+    // Number.isNaN(10) // false
+    // Number.isNaN(1 + undefined) // true
+    
+    // let x = 2;
+
+    // //2 % 2는 0이고, 0은 false로 암묵적 타입 변환된다.
+    // let result = x % 2 ? '홀수' : '짝수';
+
+    // console.log(result);
+
+    // let x = 2, result;
+
+    // if (x % 2) result = '홀수';
+    // else result = '짝수';
+
+    // console.log(result);
+    
+    // let x,y,z;
+    // x=1, y=2, z=3 // 3
+    
+    // 10 * (2 + 3) // 50
+
+    // typeof '' // 'string'
+    // typeof 1 // 'number'
+    // typeof NaN // 'NaN'
+    // typeof true // 'boolean'
+    // typeof undefined // 'undefined'
+    // typeof Symbol() // 'Symbol'
+    // typeof null // 'object'
+    // typeof [] //'object'
+    // typeof {} // 'object'
+    // typeof new Date() // 'object'
+    // typeof /test/gi // 'object'
+    // typeof function() // function
+
+    // //지수 연산자의 결합 순서는 우항에서 좌항이다. 즉, 우결합성을 갖는다.
+    // 2 ** (3 ** 2) // 512
+    // (-5) ** 2 // 25, 음수를 거듭제곱의 밑으로 사용해 계산하려면 괄호로 묶어서 사용해야 한다.
+
+    // let x;
+
+    // // 할당 연산자는 변수 값이 변하는 부수 효과가 있다. 이는 x 변수를 사용하는 다른 코드에 영향을 준다.
+    // x = 1;
+    // console.log(x); // 1
+
+    // // 증가/감소 연산자는 피연산자의 값을 변경하는 부수 효과가 있다.
+    // // 피연산자 x의 값이 재할당되어 변경된다. 이는 x 변수를 사용하는 다른 코드에 영향을 준다.
+
+    // x++;
+    // console.log(x); // 2
+
+    // var o = {a : 1};
+
+    // // delete 연산자는 객체의 프로퍼티를 삭제하는 부수 효과가 있다. 이는 o 객체를 사용하는 다른 코드에 영향을 준다.
+    // delete o.a;
+    // console.log(o); // {}
+    
+    
+    
+
+  </script>
+</body>
+</html>
+
