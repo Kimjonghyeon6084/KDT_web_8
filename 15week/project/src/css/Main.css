@@ -1,3 +1,8 @@
+.container {
+  width: 300px;
+  display: flex;
+}
+
 .ListImg {
   background-size: cover;
   background-position: center;
