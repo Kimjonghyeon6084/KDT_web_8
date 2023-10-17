@@ -18,10 +18,10 @@ export default function NavbarMain() {
                                 className="logoA"
                                 href=""
                             >
-                                🥾
+                                
                                 <img
                                     className="logoImg"
-                                    src=""
+                                    src="./logo.png"
                                 />
                             </a>
                         </h1>
@@ -36,7 +36,7 @@ export default function NavbarMain() {
                         <div className="navbarUpRightRight">
                             <span>로그인</span>
                             <span>마이페이지</span>
-                            <span>장바구니</span>
+                            <span onClick={() => {navigate('/cart')}}>장바구니</span>
                             <span>매장찾기</span>
                         </div>
                     </div>

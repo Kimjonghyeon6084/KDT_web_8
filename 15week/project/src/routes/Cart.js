@@ -23,7 +23,6 @@ export default function Cart(){
   
   return (
     <>
-    <NavberMain/>
     <div>
       {state.user.name} {state.user.age}살의 장바구니
       <button onClick={() => {

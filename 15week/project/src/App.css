@@ -1,21 +1,21 @@
 /*NavbarMain.js*/
 .navbar {
     width: 100%;
-    height: 8rem;
+    height: 8em;
     /* display: flex; */
     text-align: center;
     background-color: #f8f2ea;
 }
 .navbarUp {
     display: flex;
-    height: 4rem;
+    height: 4em;
     justify-content: space-around;
 }
 .navbarUp h1 {
-    margin: 1rem;
+    margin: 0.35em;
 }
 .navbarUp input {
-    margin: 1.3rem;
+    margin: 1.3em;
 }
 .navbarUpLeft {
     width: 10%;
@@ -27,21 +27,33 @@
 }
 .navbarUpRightRight > span {
     font-weight: bold;
-    line-height: 4rem;
-    margin: 0 15px 0 15px;
+    line-height: 4em;
+    margin: 0 0.5em 0 0.5em;
+    font-size: 1em;
 }
+.navbarUpRightUpInput > input {
+    width: 18em;
+    height: 2em;
+    margin: 1em 0 0 0;
+    padding: 0;
+    border: none;
+    border-bottom: solid #aaaaaa 2px;
+    background-color: #f8f2ea;
+    
 
+}
 .navbarMenu {
-    line-height: 60px;
+    line-height: 60em;
     font-weight: bold;
 }
 
 .navbarDown {
-    height: 4rem;
+    height: 4em;
     background-color: red;
+    color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: baseline;
 }
 .navbarDownLeft {
     justify-content: space-between;
@@ -49,23 +61,35 @@
 }
 .navbarDownLeft > span {
     font-weight: bold;
-    line-height: 4rem;
-    margin: 0 15px 0 15px;
+    line-height: 4em;
+    margin: 0 1em 0 1em;
 }
 .navbarDownRight {
     display: flex;
 }
 .navbarDownRight > span{
     font-weight: bold;
-    line-height: 4rem;
-    margin: 0 15px 0 15px;
+    line-height: 4em;
+    margin: 0 1em 0 1em;
 }
 
 /*Main.js*/
 .container {
+    margin-left: 0 8% 0 8%;
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .shoesDiv {
-    width: 100%;
+    width: auto;
+    height: 30%;
+    padding: 1em;
+}
+.shoesDiv p,h4 {
+    padding-left: 2em;
+}
+.shoesImg {
+    width: 20em;
+    height: 20em;
 }

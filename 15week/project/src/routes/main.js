@@ -11,15 +11,14 @@ export default function Main({ shoes, setShoes }) {
     return (
         <>
             <div className="container">
-                {shoes.map((item, action) => {
+                {shoes.map((item) => {
                     return (
                         <div onClick={() => {navigate(`/detail/${item.id}`)}}
                             className="shoesDiv"
                             key={item.id}
                         >
-                            <img sre={item.imgUrl} />
                             <img
-                                className="ListImg"
+                                className="shoesImg"
                                 src={process.env.PUBLIC_URL + item.imgUrl}
                             />
                             <h4>{item.title}</h4>
@@ -30,7 +29,7 @@ export default function Main({ shoes, setShoes }) {
                     );
                 })}
             </div>
-            <button
+            {/* <button
                 onClick={() => {
                     axios
                         .get('https://codingapple1.github.io/shop/data2.json')
@@ -45,7 +44,7 @@ export default function Main({ shoes, setShoes }) {
                 }}
             >
                 버튼
-            </button>
+            </button> */}
         </>
     );
 }
