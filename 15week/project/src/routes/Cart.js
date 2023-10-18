@@ -17,7 +17,7 @@ export default function Cart(){
   const basket = state.basket;
   const cart = state.cart;
   // console.log(state.basket);
-  console.log('state.cart : ', state.cart);
+  console.log('state : ', state);
   
   
   
@@ -42,9 +42,9 @@ export default function Cart(){
             // console.log('item : ', item);
             return (
               <tr key={i}>
-                <td>{state.cart[i].id}</td>
-                <td>{state.cart[i].name}</td>
-                <td>{state.cart[i].count}</td>
+                <td>{item.id}</td>
+                <td>{item.name}</td>
+                <td>{item.count}</td>
                 <td>안녕</td>
                 {/* <td><button onClick={() => {
                   dispatch(changeName())

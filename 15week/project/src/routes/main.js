@@ -19,7 +19,7 @@ export default function Main({ shoes, setShoes }) {
                         >
                             <img
                                 className="shoesImg"
-                                src={process.env.PUBLIC_URL + item.imgUrl}
+                                src={`https://kdt8-kjh-test.s3.ap-northeast-2.amazonaws.com/${item.id}.png`}
                             />
                             <h4>{item.title}</h4>
                             <p>{item.content}</p>

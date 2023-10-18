@@ -93,3 +93,39 @@
     width: 20em;
     height: 20em;
 }
+/*Login.js*/
+.login {
+    position: relative;
+    margin-top: 10em;
+    padding-bottom: 2em;
+    text-align: center;
+    font-weight: 900;
+}
+
+/* .userTypeTab2 {
+    margin: auto;
+} */
+.userTypeTab {
+    /* display: flex; */
+    /* position: relative; */
+    /* left: auto; */
+    margin: auto;
+    width: 50vw;
+}
+.userTypeTab > div {
+    width: 16em;
+    height: 3em;
+    text-align: center;
+    font-weight: 700;
+    line-height: 3em;
+    border: 2px solid;
+}
+.userInput div {
+    display: block;
+}
+.loginBtn {
+    background-color: black;
+    color: white;
+    width: 40em;
+    height: 3em;
+}

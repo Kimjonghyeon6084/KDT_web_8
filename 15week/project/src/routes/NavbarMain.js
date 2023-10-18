@@ -21,7 +21,7 @@ export default function NavbarMain() {
                                 
                                 <img
                                     className="logoImg"
-                                    src="./logo.png"
+                                    src="https://kdt8-kjh-test.s3.ap-northeast-2.amazonaws.com/logo.png"
                                 />
                             </a>
                         </h1>

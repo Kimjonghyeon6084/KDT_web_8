@@ -10,6 +10,7 @@ import data from './Component/data';
 import Cart from './routes/Cart';
 import { useEffect, useState } from 'react';
 import NavbarMain from './routes/NavbarMain';
+import Login from './routes/Login';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
     <NavbarMain />
       <Routes>
         <Route path='/' element={<Main shoes={shoes} setShoes={setShoes}/>}/>
+        <Route path='/login' element={<Login/>}/>
         {/* <Route path='/list' element={<List shoes={shoes} setShoes={setShoes}/>}/> */}
         <Route path='/detail/:id' element={<Detail shoes={shoes}/>}/>
           <Route path='/cart' element={<Cart/>}/>

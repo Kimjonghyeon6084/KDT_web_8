@@ -64,11 +64,9 @@ console.log('1', product.imgUrl);
 
                 <div className="row">
                     <div className="col-md-6">
-                        {/* <img src={`https://codingapple1.github.io/shop/shoes1.jpg`} width="100%" />
-                         */}
                             <img
                                 className="detailShoesImg"
-                                src={process.env.PUBLIC_URL + product.imgUrl}
+                                src={`https://kdt8-kjh-test.s3.ap-northeast-2.amazonaws.com/${product.id}.png`}
                             />
                     </div>
                     <div className="col-md-6">
@@ -80,8 +78,8 @@ console.log('1', product.imgUrl);
                             onClick={() => {
                                 dispatch(
                                     addItem({
-                                        id: 1,
-                                        name: 'red Knit',
+                                        id: product.id,
+                                        name: product.name,
                                         count: 1,
                                     })
                                 );

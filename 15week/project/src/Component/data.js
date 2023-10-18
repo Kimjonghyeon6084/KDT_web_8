@@ -4,7 +4,7 @@ const data = [
     title : "아키클래식",
     content : "타이탄 블랙화이트",
     price : 53900,
-    imgUrl : './0.png'
+    imgUrl : '../Img/0.png'
   },
   {
     id : 1,
