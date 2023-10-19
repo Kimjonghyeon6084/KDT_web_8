@@ -36,9 +36,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Main shoes={shoes} setShoes={setShoes}/>}/>
         <Route path='/login' element={<Login/>}/>
-        {/* <Route path='/list' element={<List shoes={shoes} setShoes={setShoes}/>}/> */}
         <Route path='/detail/:id' element={<Detail shoes={shoes}/>}/>
-          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/cart' element={<Cart shoes={shoes}/>}/>
         <Route path='/about' element={<About/>}>
           <Route path='member' element={<div>우리 멤버는 한명이야!</div>}/>
         </Route>

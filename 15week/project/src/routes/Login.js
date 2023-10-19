@@ -6,8 +6,8 @@ export default function Login() {
             </div>
             <div className="loginForm">
                 <div className="userTypeTab">
-                    <div>회원 로그인</div>
-                    <div>비회원 주문조회</div>
+                    <div className="userLogin">회원 로그인</div>
+                    <div className="orderBtn">비회원 주문조회</div>
                 </div>
                 <div className="userTypeTab2"></div>
                 <div className="userInput">
@@ -27,7 +27,7 @@ export default function Login() {
                 <div>
                     <button className="loginBtn">로그인</button>
                 </div>
-                <div>
+                <div className="userHelp">
                     <a>아이디 찾기</a>
                     <a>비밀번호 찾기</a>
                     <a>회원가입</a>

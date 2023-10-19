@@ -50,9 +50,9 @@ const data = [
   },
   {
     id : 7,
-    title : '나이키',
-    content : '나이키 오프코트 슬라이드',
-    price : 39000,
+    title : '휠라',
+    content : '타르가 88/22',
+    price : 79000,
     imgUrl : './7.png'
   },
   {
@@ -71,9 +71,9 @@ const data = [
   },
   {
     id : 10,
-    title : '나이키',
-    content : '나이키 오프코트 슬라이드',
-    price : 39000,
+    title : '커스템에이드',
+    content : '4.5cm 캔버스 스니커즈 스탠다드',
+    price : 41300,
     imgUrl : './10.png'
   },
   {

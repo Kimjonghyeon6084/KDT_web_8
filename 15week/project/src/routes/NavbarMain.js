@@ -34,7 +34,7 @@ export default function NavbarMain() {
                             />
                         </div>
                         <div className="navbarUpRightRight">
-                            <span>로그인</span>
+                            <span onClick={()=>{navigate('/login')}}>로그인</span>
                             <span>마이페이지</span>
                             <span onClick={() => {navigate('/cart')}}>장바구니</span>
                             <span>매장찾기</span>
