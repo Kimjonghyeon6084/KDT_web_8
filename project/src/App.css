@@ -1,0 +1,364 @@
+/*-----------------NavbarMain.js*/
+.navbar {
+    width: 100%;
+    height: 8em;
+    /* display: flex; */
+    text-align: center;
+    background-color: #f8f2ea;
+}
+.navbarUp {
+    display: flex;
+    height: 4em;
+    justify-content: space-around;
+}
+.navbarUp h1 {
+    margin: 0.35em;
+}
+.navbarUp input {
+    margin: 1.3em;
+}
+.navbarUpLeft {
+    width: 10%;
+}
+.navbarUpRight {
+    justify-content: space-between;
+    width: 50%;
+    display: flex;
+}
+.navbarUpRightRight > span {
+    font-weight: bold;
+    line-height: 4em;
+    margin: 0 0.5em 0 0.5em;
+    font-size: 1em;
+}
+.navbarUpRightUpInput > input {
+    width: 18em;
+    height: 2em;
+    margin: 1em 0 0 0;
+    padding: 0;
+    border: none;
+    border-bottom: solid #aaaaaa 2px;
+    background-color: #f8f2ea;
+    
+
+}
+.navbarMenu {
+    line-height: 60em;
+    font-weight: bold;
+}
+
+.navbarDown {
+    height: 4em;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.navbarDownLeft {
+    justify-content: space-between;
+
+}
+.navbarDownLeft > span {
+    font-weight: bold;
+    line-height: 4em;
+    margin: 0 1em 0 1em;
+}
+.navbarDownRight {
+    display: flex;
+}
+.navbarDownRight > span{
+    font-weight: bold;
+    line-height: 4em;
+    margin: 0 1em 0 1em;
+}
+
+/*----------------Main.js*/
+.container {
+    margin-left: 0 8% 0 8%;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.shoesDiv {
+    width: auto;
+    height: 30%;
+    padding: 1em;
+}
+.shoesDiv p,h4 {
+    padding-left: 2em;
+}
+.shoesImg {
+    width: 20em;
+    height: 20em;
+}
+
+
+
+/*--------------------------Detail.js*/
+.datailCountainer {
+    display: flex;
+    padding-bottom: 10rem;
+}
+.shoesPic img{
+    width: 35rem;
+    margin: 7rem 2rem 1rem 20rem;
+}
+.shoesPics {
+    margin-left: 20rem;
+    width: 30rem;
+}
+.shoesPics img {
+    width: 7rem;
+    
+}
+.shoesPics {
+    display: flex;
+} 
+.shoeSatisfaction {
+    width: 557px;
+    display: flex;
+    border-top: 1px solid #666;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.shoeSatisfaction {
+    margin-left: 20rem;
+}
+.상품만족도그림 {
+    padding-left: 4rem;
+}
+.상품만족도그림 div,h2{
+    text-align: center;
+    padding-top: 1rem;
+}
+.productSati2 {
+    color: red;
+}
+
+.상품만족도문자before {
+    display: block;
+    /* position: absolute; */
+    margin-left: 70px;
+    margin-top: 38px;
+    width: 1px;
+    height: 80px;
+    background: black;
+}
+
+.상품만족도문자  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.상품만족도문자 > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.상품만족도문자 > ul > ol span {
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+
+.shoesName {
+    margin-top: 7rem;
+    /* margin-left: rem; */
+}
+.shoesName {
+    padding-left: 2rem;
+}
+.shoesName > h4 {
+    padding: 0;
+}
+.shoesName > h2 {
+    /* padding-left: 5rem; */
+    color: red;
+    text-align: left;
+}
+.shoesDetailInfo  td {
+    padding: 1rem 0 1rem 2rem;
+}
+.infoMenu {
+    font-weight: 700;
+}
+.infoMenu2 {
+    padding-left: 30rem;
+}
+.choiceBtn {
+    margin-top: 4rem;
+}
+.choiceBtn > div {
+    padding-top: 2rem;
+}
+.totalPrice {
+    display: flex;
+}
+.totalPrice div {
+    font-size: 30px;
+}
+.totalPrice span {
+    padding-left: 8rem;
+    font-size: 30px;
+    color: red;
+}
+.choiceBtn2 > button {
+    width: 13rem;
+    height: 3rem;
+    border: none;
+}
+.cartBtn {
+    background-color: #666;
+    color: white;
+}
+.buyBtn {
+    margin-left: 1rem;
+    background-color: black;
+    color: white;
+}
+/*----------------------------Login.js*/
+.login {
+    position: relative;
+    margin-top: 10em;
+    padding-bottom: 2em;
+    text-align: center;
+    font-weight: 900;
+}
+.userTypeTab{
+    display: flex;
+}
+.userTypeTab div {
+    width: 10rem;
+}
+.userLogin {
+    border-bottom: none !important;
+    margin-left: 11rem;
+}
+.userInput {
+    padding-top: 5rem;
+}
+.userInput input {
+    width: 50rem;
+    height: 3rem;
+    margin-left: 30rem;
+    margin-top: 1rem;
+}
+.loginBtn {
+    margin: 4rem 0 0 34rem;
+}
+
+.userTypeTab {
+    margin: auto;
+    width: 50vw;
+}
+.userTypeTab > div {
+    width: 16em;
+    height: 3em;
+    text-align: center;
+    font-weight: 700;
+    line-height: 3em;
+    border: 2px solid;
+}
+.userInput div {
+    display: block;
+}
+.loginBtn {
+    background-color: black;
+    color: white;
+    width: 40em;
+    height: 3em;
+}
+.userHelp {
+    margin: 4rem 0 0 44rem;
+}
+.userHelp > a {
+    padding: 0 1rem;
+}
+/*-------------------cart.js*/
+.cart {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+    padding-bottom: 100px;
+}
+.cartTable {
+    border: 1px solid black;
+}
+.cartTable tr {
+    border-bottom: 1px solid #edecec;
+}
+.cartTableRow {
+    background: #edecec;
+    height: 3rem;
+}
+.cartName2 {
+    display: flex;
+}
+.cartName2 p {
+    font-size: 20px;
+    margin: 4rem 0;
+    color: red;
+}
+.cartName3 {
+    margin: 0.5rem 0;
+    padding-left: 18rem;
+}
+.cartName3 button {
+    width: 10rem;
+    height: 3rem;
+    margin: 3rem 0 3rem 3rem;
+    border: none;
+}
+.cartTitle2 h2 {
+    text-align: left;
+}
+.cartTitle3 {
+    width: 70%;
+    height: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: auto;
+    text-align: center;
+    border: 3px solid #000 ;
+    border-bottom: none;
+}
+.shoesDetail table {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.shoesDetailMid {
+    display: flex;
+}
+.shoesDetailTotal {
+    margin : 5rem 0 0 50rem
+}
+.shoesDetailTotal span {
+    color: red;
+    font-size: 2rem;
+    display: inline-block;
+    width: 20rem;
+}
+.cartImg img {
+    width: 7rem;
+    height: 7rem;
+
+}
+.loginBtn a {
+    text-decoration: none;
+    color: white;
+}
+.shoesDetailBtn {
+    width: 31%;
+    margin: 7rem auto 0 auto;
+}
+.shoesDetailBtn button {
+    width: 15rem;
+    height: 3rem;
+}
